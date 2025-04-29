@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.wrapper {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+/* Style for the Forgot Password link */
+.forgotPasswordLink {
+    color: #0ef; /* Set the text color to light blue (or any color of your choice) */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust the font size */
+    transition: color 0.3s ease; /* Smooth transition effect when hovered */
+}
+
+/* Hover effect */
+.forgotPasswordLink:hover {
+    color: #fff; /* Change color to white when hovered */
+    text-decoration: underline; /* Add an underline on hover */
+}
+
+
+/* .task-list {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transition: transform 0.7s ease-in-out;
+}
+*/
+.wrapper:hover {
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1.2s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.sign-in {
+    transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up {
+    transform: translateY(-450px);
+}
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.32s;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+}
+
+.remember {
+    margin: -5px 0 15px 5px;
+}
+
+.remember label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.remember label input {
+    accent-color: #0ef;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.signUp-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link p {
+    color: #fff;
+}
+
+.signUp-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp-link p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper.active .form-wrapper.sign-in {
+    transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up {
+    transform: translateY(-450px);
+}
+
+.form-wrapper.slide-left {
+    transform: translateX(-100%);
+    transition: transform 0.7s ease-in-out;
+}
+
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: left 0.7s ease, opacity 0.7s ease;
+    color: #000;
+    /* width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; */
+}
+
+.task-form,
+.task-list {
+    padding: 20px;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #0ef;
+    color: #0ef;
+}
+
+.task-form h2,
+.task-list h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Form styling */
+.task-form input,
+.task-form select,
+.task-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.task-form button {
+    background-color: #0ef;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Task list styling */
+.task-lists {
+    display: flex;
+    gap: 20px;
+}
+
+.task-column {
+    width: 50%;
+    color: #0ef;
+}
+
+.task-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.task-category {
+    font-size: 0.8em;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.wrapper .form-wrapper.slide-left+.container {
+    left: 50%;
+    opacity: 1;
+}
+
+.container.show-todo {
+    left: auto;
+    opacity: 1;
+}
+
+/* Add transition for smooth theme change */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #fff;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0ef;
+    color: #0c0c0c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left h1 {
+    font-size: 24px;
+}
+
+.header-right nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-right a {
+    color: #030303;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+    color: rgb(15, 15, 15);
+}
+
+/* Style for the delete button */
+.delete-btn {
+    background-color: #ff4d4d;
+    color: #fff;    
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 5px;
+    padding: 5px 5px;
+    font-size: 1.1em;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}

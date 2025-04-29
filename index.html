@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify - To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Home Section -->
+    <section id="home-section" class="main-section">
+        <div class="welcome-container">
+            <!-- Image on the left side -->
+            <img src="https://msgsndr-private.storage.googleapis.com/calendar-widget-logo/6b6e12d1-ffc5-4efb-8239-9dfd1fde4503.png" alt="Taskify Logo" class="taskify-image" position="fixed">
+            <!-- Welcome Text -->
+            <div class="welcome-text">
+                <h2>Welcome to Taskify!</h2>
+                <p>Your simple to-do list application. Stay organized and productive.</p>
+            </div>
+        </div>
+        <!-- Get Started Block -->
+        <div class="get-started">
+            <a href="login.html"><button>Get Started</button></a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us-section" class="main-section" style="display: none;">
+        <h2>About Us</h2>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="main-section" style="display: none;">
+        <h2>Contact</h2>
+    </section>
+    <!-- Login Modal -->
+<div id="login-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('login-modal')">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required><br><br>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signup-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signup-modal')">&times;</span>
+        <h2>Signup</h2>
+        <form>
+            <label for="signup-name">Name:</label>
+            <input type="text" id="signup-name" name="name" required><br><br>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required><br><br>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required><br><br>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+</div>
+
+<!-- Navbar -->
+<header style="height: 40px;">
+    <h1>Taskify</h1>
+    <nav>
+        <ul style="margin-right: 20px;">
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="aboutus.html" >About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+        </ul>
+    </nav>
+</header>
+
+      <script src="script.js"></script>
+</body>
+</html>

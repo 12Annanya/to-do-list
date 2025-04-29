@@ -1,0 +1,177 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;  /* Black background */
+    color: #fff;  /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* Align the content to the top */
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Navbar styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0ef;  /* Light blue shade for the header */
+    padding: 15px 20px;
+    color: #000;  /* Dark text for the header */
+    border-radius: 8px;
+    width: 100%; /* Ensures header spans the full width */
+    position: fixed; /* Keep it at the top */
+    top: 0;
+    left: 0;
+    right:0;
+    z-index: 1000;
+    height: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: left; /* Align the Taskify name to the left */
+    margin-left: 20px; /* Add left margin for spacing */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Main content styles */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;  /* Adjust top margin to push the content down a bit */
+}
+
+#home-section {
+    display: block;
+    width: 100%;
+}
+
+#about-us-section, #contact-section {
+    display: none;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Welcome Container */
+.welcome-container {
+    display: flex;
+    width: 100%;
+    height: 50vh; /* Set the height to half of the viewport */
+}
+
+.taskify-image {
+    width: 50%;  /* Image covers 50% of the left side */
+    height: auto;
+    object-fit: cover;  /* Maintain image aspect ratio */
+}
+
+.welcome-text {
+    width: 50%;  /* Text occupies the other 50% */
+    text-align: right; /* Align the text to the right */
+    padding: 20px;
+}
+
+/* Get Started Block */
+.get-started {
+    margin-top: 20px;
+    text-align: center;  /* Center the content */
+}
+
+.get-started button {
+    background-color: #0ef;  /* Light blue background for the button */
+    color: #000;  /* Dark text */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;  /* Larger font size */
+    cursor: pointer;
+    border-radius: 10px;  /* Rounded corners */
+    font-weight: bold;
+    text-transform: uppercase;  /* Uppercase text for style */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.get-started button:hover {
+    background-color: rgb(67, 241, 253);  
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form input styling */
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
